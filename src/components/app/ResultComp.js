@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDom from 'react-dom'
-import styles from './styles.scss';
 
 var divStyle = {
   background: 'transparent',

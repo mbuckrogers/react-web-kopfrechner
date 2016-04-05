@@ -1,6 +1,3 @@
-
-
-
 class Game {
   constructor(lefti, righti) {
     this.numberValLeft = lefti
@@ -21,8 +18,6 @@ class Game {
 var GameStore = {
 
   numbersGenerated: false,
-  numberValsLeft: undefined,
-  numberValsRight: undefined,
   game: undefined,
   games: [],
 
