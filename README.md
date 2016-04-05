@@ -19,11 +19,6 @@ Start from react-boilerplate to start a client-side project using React.
     - use Babel 6 as parser using [babel-eslint](https://github.com/babel/babel-eslint)
     - lint page on save using [eslint-loader](https://github.com/MoOx/eslint-loader)
 
-## Hot Module Replacement (HMR) in action
-![ScreenShot](https://cloud.githubusercontent.com/assets/983189/12616751/91833172-c504-11e5-87e9-f36efbd1d17c.gif)
-
-As you can see the HMR is working without reloading the page for React components and styles.
-
 ## Getting started
 ```bash
 $ git clone https://github.com/mbuckrogers/react-web-kopfrechner.git
