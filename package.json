@@ -1,23 +1,22 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-web-kopfrechner",
   "version": "0.2.2",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --progress",
-
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production webpack -p",
     "postbuild": "npm run copy",
-
     "clean": "rm -rf build",
     "copy": "xcopy /S static/* build"
   },
-  "author": "Riccardo Bartoli <info@rblab.com> (http://rblab.com/)",
+  "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rbartoli/react-boilerplate"
+    "url": "git+https://github.com/mbuckrogers/react-web-kopfrechner.git"
   },
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.9.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0"
