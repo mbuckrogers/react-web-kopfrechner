@@ -5,7 +5,6 @@ import ResultComp from './ResultComp';
 import GameStore from './GameStore';
 import Games from './Games'
 import TwoNumberGenerator from './TwoNumberGenerator'
-import ScoreBar from './ScoreBar'
 import SuccessBadges from './SuccessBadges'
 
 class App extends Component {

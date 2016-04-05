@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './mystyles.css';
 
 class SuccessBadges extends Component {
 
@@ -24,7 +23,7 @@ class SuccessBadges extends Component {
     return(
       <div>
           <div className='w3-col s6'>
-              <span className="w3-padding-right">Richtig </span>
+              <span className="w3-padding-">Richtig </span>
               <span className='w3-badge w3-green'>{rigghtWrong.correct}</span>
           </div>
           <div className='w3-col s6'>

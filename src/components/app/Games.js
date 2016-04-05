@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import styles from './mystyles.css';
 
 class Games extends Component {
 
   render() {
       return(
         <div>
-            {this.props.games.slice(0, 3).map( (game, index) => {
+            {this.props.games.slice(0, 5).map( (game, index) => {
                 return (
                     <div key={index} className={'w3-row w3-padding-0 w3-margin-0'}>
                         <GameLine  game={game}/>
