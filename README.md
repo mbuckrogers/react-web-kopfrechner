@@ -1,5 +1,4 @@
-# React boilerplate
-A boilerplate to start a client-side project using React.
+Start from react-boilerplate to start a client-side project using React.
 
 ## Features
 - [ES2015](https://babeljs.io/docs/learn-es2015)
@@ -27,7 +26,7 @@ As you can see the HMR is working without reloading the page for React component
 
 ## Getting started
 ```bash
-$ git clone https://github.com/rbartoli/react-boilerplate.git
+$ git clone https://github.com/mbuckrogers/react-web-kopfrechner.git
 $ npm i # shortcut for npm install
 $ npm start
 ```
