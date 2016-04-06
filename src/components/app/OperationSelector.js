@@ -16,10 +16,10 @@ class OperationSelector extends Component {
               value={this.props.selectedOperation}
               onChange={this.handleSelect}
               name="options">
-              <option value="0">* Multiply</option>
-              <option value="1">/ Divide</option>
+              <option value="0">* Multiplikation</option>
+              <option value="1">/ Division</option>
               <option value="2">+ Addition</option>
-              <option value="3">- Subtraction</option>
+              <option value="3">- Subtraktion</option>
           </select>
       </div>
     )
