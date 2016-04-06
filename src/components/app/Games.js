@@ -25,7 +25,7 @@ class GameLine extends Component {
         return (
         <div>
             <div className={'w3-col s1  w3-center'}><span>{this.props.game.numberValLeft}</span></div>
-            <div className={'w3-col s1  w3-center'}><span>x</span></div>
+            <div className={'w3-col s1  w3-center'}><span>{this.props.game.operation.display}</span></div>
             <div className={'w3-col s1  w3-center'}><span>{this.props.game.numberValRight}</span></div>
             <div className={'w3-col s1  w3-center'}><span>=</span></div>
             <div className={'w3-col s4  w3-left'}><span>{this.props.game.result}  ({this.props.game.answer})</span></div>

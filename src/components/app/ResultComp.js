@@ -18,7 +18,7 @@ class ResultComp extends Component {
 
 
     handleResize() {
-      this.resize(this.refs.numberInput)
+      //this.resize(this.refs.numberInput)
     }
 
     resize(domElement) {

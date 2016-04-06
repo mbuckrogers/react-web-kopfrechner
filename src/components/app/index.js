@@ -2,10 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import NumberView from './NumberView';
 import ResultComp from './ResultComp';
-import GameStore from './GameStore';
+import GameStore, {Operations, OperationsArray, Game} from './GameStore';
 import Games from './Games'
 import TwoNumberGenerator from './TwoNumberGenerator'
 import SuccessBadges from './SuccessBadges'
+import OperationSelector from './OperationSelector'
 
 class App extends Component {
 
@@ -20,11 +21,16 @@ class App extends Component {
       this.newGameAndStateChange()
     }
 
+    actualOperation() {
+      return this.state.gameStore.selectedOperation
+    }
+
     newGameAndStateChange() {
       this.tNumGen.twoNumbers().then((twoNumArray) => {
         let tmpGameStore = Object.assign({}, this.state.gameStore)
         tmpGameStore.numbersGenerated = true
-        tmpGameStore.newGame(...twoNumArray)
+
+        tmpGameStore.newGame(...twoNumArray, this.actualOperation())
         this.setState({gameStore: tmpGameStore})
       })
     }
@@ -42,6 +48,20 @@ class App extends Component {
       tmpGameStore.numbersGenerated = false
       this.setState({gameStore: tmpGameStore})
       this.newGameAndStateChange()
+    }
+
+    onHandleSelect(event) {
+      console.log("onHandleSelect " + event.target.value)
+      let op = OperationsArray.find(operation => operation.opValue == event.target.value)
+      console.log(op)
+      let tmpGameStore = Object.assign({}, this.state.gameStore)
+      tmpGameStore.selectedOperation = op
+      let numberValLeft = tmpGameStore.game.operation === Operations.divide ?
+        tmpGameStore.game.numberValLeft / tmpGameStore.game.numberValRight : tmpGameStore.game.numberValLeft;
+
+      let adjustedGame = new Game(numberValLeft, tmpGameStore.game.numberValRight, tmpGameStore.selectedOperation)
+      tmpGameStore.game = adjustedGame
+      this.setState({gameStore: tmpGameStore})
     }
 
     render() {
@@ -65,6 +85,8 @@ class App extends Component {
                 <h2>{'Kopf Rechner'}</h2>
                 <div className={'w3-row w3-padding-0'}>
                     <SuccessBadges games={this.state.gameStore.games}/>
+                    <OperationSelector selectedOperation={this.state.gameStore.selectedOperation.opValue}
+                        onHandleSelect={this.onHandleSelect.bind(this)}/>
                 </div>
             </header>
 
@@ -74,7 +96,7 @@ class App extends Component {
                         <NumberView numberVal={this.state.gameStore.game.numberValLeft}/>
                     </div>
                     <div className={'w3-col s1  w3-center w3-margin-8'}>
-                        <span>{'x'}</span>
+                        <span>{this.state.gameStore.game.operation.display}</span>
                     </div>
                     <div className={'w3-col s1  w3-center w3-margin-8'}>
                         <NumberView numberVal={this.state.gameStore.game.numberValRight}/>

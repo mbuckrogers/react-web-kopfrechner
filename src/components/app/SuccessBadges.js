@@ -22,11 +22,11 @@ class SuccessBadges extends Component {
 
     return(
       <div>
-          <div className='w3-col s6'>
+          <div className='w3-col s4'>
               <span className="w3-margin-right">Richtig </span>
               <span className='w3-badge w3-green'>{rigghtWrong.correct}</span>
           </div>
-          <div className='w3-col s6'>
+          <div className='w3-col s4'>
               <span className="w3-margin-right">Falsch </span>
               <span className='w3-badge w3-red'>{rigghtWrong.incorrect}</span>
           </div>
