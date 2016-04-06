@@ -8,7 +8,8 @@
     "postbuild": "npm run copy",
     "clean": "rm -rf build",
     "copy": "xcopy /S static/* build",
-    "start": "set NODE_ENV=production & node  server.js"
+    "start-dos": "set NODE_ENV=production & node  server.js",
+    "start-dos": "NODE_ENV=production node  server.js"
   },
   "author": "",
   "repository": {
