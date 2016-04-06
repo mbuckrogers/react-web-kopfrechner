@@ -12,8 +12,8 @@ class SuccessBadges extends Component {
       return {correct: 0, incorrect: 0}
     }
 
-    console.log(games.filter((game) => game.result == game.answer))
-    let correct = games.filter((game) => game.result == game.answer).length
+    console.log(games.filter((game) => game.isCorrectAnswer()))
+    let correct = games.filter((game) => game.isCorrectAnswer()).length
     return {correct: correct, incorrect: noGames - correct}
   }
 
@@ -23,7 +23,7 @@ class SuccessBadges extends Component {
     return(
       <div>
           <div className='w3-col s6'>
-              <span className="w3-padding-">Richtig </span>
+              <span className="w3-margin-right">Richtig </span>
               <span className='w3-badge w3-green'>{rigghtWrong.correct}</span>
           </div>
           <div className='w3-col s6'>

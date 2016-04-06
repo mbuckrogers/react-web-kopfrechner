@@ -2,7 +2,7 @@
   "name": "react-web-kopfrechner",
   "version": "0.2.2",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --progress",
+    "start": "webpack-dev-server --hot --inline --progress --host 192.168.0.15",
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production webpack -p",
     "postbuild": "npm run copy",

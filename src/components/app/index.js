@@ -70,13 +70,13 @@ class App extends Component {
 
             <div className={'w3-container w3-white w3-padding-16'}>
                 <div className={'w3-row w3-padding-bottom'}>
-                    <div className={'w3-col s1  w3-center'}>
+                    <div className={'w3-col s1  w3-center w3-margin-8'}>
                         <NumberView numberVal={this.state.gameStore.game.numberValLeft}/>
                     </div>
-                    <div className={'w3-col s1  w3-center'}>
-                        <p>{'x'}</p>
+                    <div className={'w3-col s1  w3-center w3-margin-8'}>
+                        <span>{'x'}</span>
                     </div>
-                    <div className={'w3-col s1  w3-center'}>
+                    <div className={'w3-col s1  w3-center w3-margin-8'}>
                         <NumberView numberVal={this.state.gameStore.game.numberValRight}/>
                     </div>
                     <div>

@@ -20,7 +20,7 @@ class Games extends Component {
 class GameLine extends Component {
     render() {
 
-        let upDownn = this.props.game.result == this.props.game.answer ? 'fa-thumbs-up w3-text-green' : 'fa-thumbs-down w3-text-red'
+        let upDownn = this.props.game.isCorrectAnswer() ? 'fa-thumbs-up w3-text-green' : 'fa-thumbs-down w3-text-red'
 
         return (
         <div>

@@ -6,6 +6,8 @@ class Game {
     this.answer = '';
   }
 
+
+
   isCorrectAnswer() {
     return this.result == this.answer
   }

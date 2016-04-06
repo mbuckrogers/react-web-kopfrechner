@@ -4,9 +4,9 @@ import React, {Component} from 'react';
 class NumberView extends Component {
   render() {
     return (
-      <p>
-        {this.props.numberVal}
-      </p>
+      <span>
+          {this.props.numberVal}
+      </span>
   );
   }
 }
