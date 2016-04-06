@@ -2,12 +2,13 @@
   "name": "react-web-kopfrechner",
   "version": "0.2.2",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --progress --host 192.168.0.15",
+    "dev": "webpack-dev-server --hot --inline --progress",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "set NODE_ENV=production & webpack -p",
     "postbuild": "npm run copy",
     "clean": "rm -rf build",
-    "copy": "xcopy /S static/* build"
+    "copy": "xcopy /S static/* build",
+    "start": "set NODE_ENV=production & node  server.js"
   },
   "author": "",
   "repository": {
@@ -16,6 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "express": "^4.13.4",
     "axios": "^0.9.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
